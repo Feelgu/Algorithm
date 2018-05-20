@@ -1,7 +1,6 @@
 # Algorithm
 
-* Study Algorithm using SW Expert Academy
-  https://swexpertacademy.com/main/main.do
+* Study Algorithm using [SW Expert Academy](https://swexpertacademy.com/main/main.do)
 
 
 
