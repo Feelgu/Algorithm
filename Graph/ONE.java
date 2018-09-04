@@ -17,19 +17,19 @@ class ONE{
     }
  
     public void dijkstra(int v){
-        int distance[] = new int[n+1];          //ÃÖ´Ü °Å¸®¸¦ ÀúÀåÇÒ º¯¼ö
-        boolean[] check = new boolean[n+1];     //ÇØ´ç ³ëµå¸¦ ¹æ¹®Çß´ÂÁö Ã¼Å©ÇÒ º¯¼ö
+        int distance[] = new int[n+1];          //ìµœë‹¨ ê±°ë¦¬ë¥¼ ì €ì¥í•  ë³€ìˆ˜
+        boolean[] check = new boolean[n+1];     //í•´ë‹¹ ë…¸ë“œë¥¼ ë°©ë¬¸í–ˆëŠ”ì§€ ì²´í¬í•  ë³€ìˆ˜
          
-        //distance°ª ÃÊ±âÈ­.
+        //distanceê°’ ì´ˆê¸°í™”.
         for(int i=1;i<n+1;i++){
             distance[i] = Integer.MAX_VALUE;
         }
          
-        //½ÃÀÛ³ëµå°ª ÃÊ±âÈ­.
+        //ì‹œì‘ë…¸ë“œê°’ ì´ˆê¸°í™”.
         distance[v] =0;
         check[v] =true;
          
-        //¿¬°á³ëµå distance°»½Å
+        //ì—°ê²°ë…¸ë“œ distanceê°±ì‹ 
         for(int i=1;i<n+1;i++){
             if(!check[i] && map[v][i] !=0){
                 distance[i] = map[v][i];
@@ -61,7 +61,7 @@ class ONE{
  
         }
          
-        //°á°ú°ª Ãâ·Â
+        //ê²°ê³¼ê°’ ì¶œë ¥
         for(int i=1;i<n+1;i++){
             System.out.print(distance[i]+" ");
         }
@@ -89,7 +89,7 @@ class ONE{
     		StringTokenizer X=  new StringTokenizer(br.readLine(), " "); 
     		StringTokenizer Y=  new StringTokenizer(br.readLine(), " "); 
     		
-    		//È¯°æ ºÎ´ã ¼¼À²(E)°ú °¢ ÇØÀúÅÍ³Î ±æÀÌ(L)ÀÇ Á¦°öÀÇ °ö(E * L2)¸¸Å­ ÁöºÒ
+    		//í™˜ê²½ ë¶€ë‹´ ì„¸ìœ¨(E)ê³¼ ê° í•´ì €í„°ë„ ê¸¸ì´(L)ì˜ ì œê³±ì˜ ê³±(E * L2)ë§Œí¼ ì§€ë¶ˆ
     		float E= Float.parseFloat(br.readLine());
     		
     		x = new int[N];
@@ -118,7 +118,7 @@ class ONE{
     }
     
     public int claculator(int x1, int y1, int x2, int y2){
-    	return Math.abs(x1-x2) + Math.abs(y1-y2);    
+    	return (Math.pow(x1-x2,2) + Math.pow(y1-y2,2));    
     }
     
 } 
